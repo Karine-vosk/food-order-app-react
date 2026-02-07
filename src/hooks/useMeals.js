@@ -1,11 +1,12 @@
 import useHttp from './useHttp';
 import { currencyFormatter } from '../util/formatting';
+import { API_BASE } from '../util/config';
 
 const config = { method: 'GET' };
 
 export const useMeals = () => {
   const { error, isLoading, data } = useHttp(
-    'http://localhost:3000/meals',
+    `${API_BASE}/meals`,
     config,
     [],
   );

@@ -1,4 +1,5 @@
 import useHttp from './useHttp.js';
+import { API_BASE } from '../util/config.js';
 
 const requestConfig = {
   method: 'POST',
@@ -8,7 +9,7 @@ const requestConfig = {
 };
 
 const useCheckoutData = () => {
-  const response = useHttp('http://localhost:3000/orders', requestConfig);
+  const response = useHttp(`${API_BASE}/orders`, requestConfig);
 
   return { ...response };
 };
