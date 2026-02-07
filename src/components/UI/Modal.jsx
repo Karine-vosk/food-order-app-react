@@ -13,14 +13,6 @@ const Modal = ({ children, open, onClose, className = '' }) => {
     return () => modal.close();
   }, [open]);
 
-  useEffect(() => {
-    console.log('mount');
-
-    return () => {
-      console.log('uuuuunnnnn');
-    };
-  }, []);
-
   return createPortal(
     <dialog ref={dialog} className={`modal ${className}`} onClose={onClose}>
       {children}

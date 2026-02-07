@@ -19,10 +19,6 @@ const Cart = () => {
   function handleCloseCart() {
     hideCart();
   }
-  console.log('progress', progress);
-
-  // <Modal open ={true} onClose={func} .... />
-  // Modal({open: true, onClose: func})
 
   return (
     <Modal
